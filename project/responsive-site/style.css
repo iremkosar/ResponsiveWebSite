@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 7px;
+}
+body {
+    font-family: "Trirong", serif;
+    color: #feffff;
+    font-weight: bold;
+    font-size: 1.6rem; /* burası html in içindeki uzaklığın 1.6 katını alıyor ki değiştirirsek dinamik şekilde değişsin*/
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333;
+}
+a {
+    text-decoration: none;
+}
+p {
+    padding: 1.6rem 0;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+header {
+    position: relative; /* Ekledim */
+    height: 46rem;
+    background: lightskyblue;
+}
+header .bg-image {
+    position: absolute;
+    background-image: url(images/5.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 46rem;
+    width: 100%;
+    opacity: 0.7;
+    z-index: 0; /*önceliği belirliyoruz */
+}
+header .content {
+    position: relative;
+    z-index: 1;
+}
+header h1 {
+    padding: 12rem;
+    padding-bottom: 0;
+}
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #ffffff; /* yazı rengi */
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: .5rem 0;
+    transition: all 0.4s;
+}
+.btn:hover {
+    background-color: #000000;
+    color: #ff0606;
+}
+
+#section-a{
+background-color: #ffffff;
+color: #333;
+padding: 3.2rem 0;
+}
+#section-b{
+    padding: 2rem;
+}
+#section-b ul{
+    list-style: none;
+}
+#section-b li{
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.col-content{
+    padding: 1.5rem;
+}
+#section-c{
+    background-color: #fff;
+    color: #000000;
+    padding: 3rem;
+}
+#section-d .box{
+    background-color: darkslategray;
+    color: #fff;
+    padding: 5rem;
+}
+#section-e .box{
+    background-color:gray;
+    color: #feffff;
+    padding: 5rem;
+}
+footer{
+    padding: 2rem;
+    background: black;
+}
+footer a{
+    color: yellowgreen;
+}
+
+@media screen and (min-width:800px){
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (min-width:1200px){
+    html{
+        font-size: 11px;
+    }
+
+    #section-b li{
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+    .box{
+        width: 50%;
+        display: inline-block;
+        
+    }
+
+}
